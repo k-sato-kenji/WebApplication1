@@ -1,0 +1,127 @@
+﻿@model WebApplication1.Models.salary
+
+@{
+    ViewData["Title"] = "データ登録";
+}
+
+<h1>データ登録</h1>
+
+<h4>給与/賞与情報</h4>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="beneficiary" class="control-label"></label>
+                <input asp-for="beneficiary" class="form-control" />
+                <span asp-validation-for="beneficiary" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="paymenttype" class="control-label"></label>
+                <!--<input asp-for="PaymentType" class="form-control" value="給与"/>-->
+                <select asp-for="paymenttype" class="form-control" value="給与">
+                    <option value="給与" selected>給与</option>
+                    <option value="賞与">賞与</option>
+                </select>
+                <span asp-validation-for="paymenttype" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="paymentdate" class="control-label"></label>
+                <input asp-for="paymentdate" class="form-control" value=@DateTime.Now.ToString("yyyy-MM-dd") />
+                <span asp-validation-for="paymentdate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="paymentamount" class="control-label"></label>
+                <input asp-for="paymentamount" class="form-control" value="0" />
+                <span asp-validation-for="paymentamount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="travelexpence" class="control-label"></label>
+                <input asp-for="travelexpence" class="form-control" value="0" />
+                <span asp-validation-for="travelexpence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="healthinsurancepremium" class="control-label"></label>
+                <input asp-for="healthinsurancepremium" class="form-control" value="0" />
+                <span asp-validation-for="healthinsurancepremium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="welfarepension" class="control-label"></label>
+                <input asp-for="welfarepension" class="form-control" value="0" />
+                <span asp-validation-for="welfarepension" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="employmentinsurancepremium" class="control-label"></label>
+                <input asp-for="employmentinsurancepremium" class="form-control" value="0" />
+                <span asp-validation-for="employmentinsurancepremium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="incometax" class="control-label"></label>
+                <input asp-for="incometax" class="form-control" value="0" />
+                <span asp-validation-for="incometax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="residenttax" class="control-label"></label>
+                <input asp-for="residenttax" class="form-control" value="0" />
+                <span asp-validation-for="residenttax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="totalpaymentamount" class="control-label"></label>
+                <input asp-for="totalpaymentamount" class="form-control" value="0" />
+                <span asp-validation-for="totalpaymentamount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="overtimeallowance" class="control-label"></label>
+                <input asp-for="overtimeallowance" class="form-control" value="0" />
+                <span asp-validation-for="overtimeallowance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="midnightallowance" class="control-label"></label>
+                <input asp-for="midnightallowance" class="form-control" value="0" />
+                <span asp-validation-for="midnightallowance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="holidayallowance" class="control-label"></label>
+                <input asp-for="holidayallowance" class="form-control" value="0" />
+                <span asp-validation-for="holidayallowance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="remarks" class="control-label"></label>
+                <input asp-for="remarks" class="form-control" />
+                <span asp-validation-for="remarks" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                    <label asp-for="RegisterDate" class="control-label"></label>
+                    <input asp-for="RegisterDate" class="form-control" />
+                    <span asp-validation-for="RegisterDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RegisterUser" class="control-label"></label>
+                    <input asp-for="RegisterUser" class="form-control" />
+                    <span asp-validation-for="RegisterUser" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UpdateDate" class="control-label"></label>
+                    <input asp-for="UpdateDate" class="form-control" />
+                    <span asp-validation-for="UpdateDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UpdateUser" class="control-label"></label>
+                    <input asp-for="UpdateUser" class="form-control" />
+                    <span asp-validation-for="UpdateUser" class="text-danger"></span>
+                </div>*@
+            <div class="form-group">
+                <input type="submit" value="登録" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">一覧へ戻る</a>
+</div>

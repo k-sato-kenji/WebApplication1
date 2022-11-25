@@ -1,0 +1,119 @@
+﻿@model IEnumerable<WebApplication1.Models.salary>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.beneficiary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.paymenttype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.paymentdate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.paymentamount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.travelexpence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.healthinsurancepremium)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.welfarepension)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.employmentinsurancepremium)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.incometax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.residenttax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.totalpaymentamount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.overtimeallowance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.midnightallowance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.holidayallowance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.remarks)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.beneficiary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.paymenttype)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.paymentdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.paymentamount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.travelexpence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.healthinsurancepremium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.welfarepension)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.employmentinsurancepremium)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.incometax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.residenttax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.totalpaymentamount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.overtimeallowance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.midnightallowance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.holidayallowance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remarks)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

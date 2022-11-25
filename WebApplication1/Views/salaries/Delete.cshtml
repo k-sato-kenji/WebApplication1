@@ -1,0 +1,111 @@
+﻿@model WebApplication1.Models.salary
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>salary</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.beneficiary)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.beneficiary)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.paymenttype)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.paymenttype)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.paymentdate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.paymentdate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.paymentamount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.paymentamount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.travelexpence)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.travelexpence)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.healthinsurancepremium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.healthinsurancepremium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.welfarepension)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.welfarepension)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.employmentinsurancepremium)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.employmentinsurancepremium)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.incometax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.incometax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.residenttax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.residenttax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.totalpaymentamount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.totalpaymentamount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.overtimeallowance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.overtimeallowance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.midnightallowance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.midnightallowance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.holidayallowance)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.holidayallowance)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.remarks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.remarks)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
